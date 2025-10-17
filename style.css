@@ -1,0 +1,87 @@
+:root { --max: 800px; }
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem;
+  background: #0b1020;
+  color: #e8eefc;
+}
+a { text-decoration: none; }
+a:focus, button:focus { outline: 3px solid #9fd2ff; outline-offset: 2px; }
+
+/* Card */
+article[data-testid="test-profile-card"] {
+  max-width: var(--max);
+  margin: 0 auto;
+  background: #121a34;
+  border: 2px solid #243056;
+  border-radius: 16px;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+/* Make avatar consistently cropped and tidy */
+figure img {
+  width: 100%;
+  height: 200px;        /* fixed display height */
+  object-fit: cover;    /* crop to fill without distortion */
+  border-radius: 999px;
+}
+/* Inputs look neat on dark UI */
+input[type="url"], input[type="file"] {
+  background: #0f1a33;
+  color: #002a8d;
+  border: 2px solid #2f3a63;
+  border-radius: 10px;
+  padding: .5rem .6rem;
+}
+input[type="url"]:focus, input[type="file"]:focus {
+  outline: 3px solid #9fd2ff;
+  outline-offset: 2px;
+}
+
+
+
+/* Layout: mobile first (stacked) */
+.card-grid { display: grid; gap: 1rem; }
+
+/* On wider screens, place avatar left, content right */
+@media (min-width: 700px) {
+  .card-grid { grid-template-columns: 200px 1fr; align-items: start; }
+}
+
+figure { margin: 0; }
+img { width: 100%; height: auto; border-radius: 12px; display: block; }
+
+header h2 { margin: 0; font-size: 1.5rem; }
+.meta { font-size: .9rem; opacity: .85; }
+
+nav ul, .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+nav ul li a {
+  padding: .5rem .75rem;
+  border: 1px solid #2f3a63;
+  border-radius: 999px;
+  display: inline-block;
+  color: #e8eefc;
+}
+nav ul li a:hover { background: #1a2546; }
+
+section h3 { margin: .5rem 0; font-size: 1.1rem; }
+.list li {
+  background: #172249;
+  border: 1px solid #2f3a63;
+  padding: .5rem .6rem;
+  border-radius: 10px;
+}
+
+/* Ensure long words/handles don’t break layout */
+.wrap { word-break: break-word; overflow-wrap: anywhere; }

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Card — Stage 0</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <article data-testid="test-profile-card" aria-label="Profile card">
+    <div class="card-grid">
+      <figure>
+        <img
+          data-testid="test-user-avatar"
+          src="Assets/profile.jpg"
+          alt="portrait of Sandra" />640
+        <figcaption class="meta">Avatar</figcaption>
+        <div class="meta" style="margin-top:.5rem">
+  <label for="avatar-url">Avatar URL:</label>
+  <input id="avatar-url" type="url" placeholder="https://example.com/me.jpg"
+         style="width:100%;max-width:320px;display:block;margin-top:.25rem" />
+  <label for="avatar-file" style="display:block;margin-top:.5rem">Or upload image:</label>
+  <input id="avatar-file" type="file" accept="image/*" />
+</div>
+      </figure>
+
+      <div class="content wrap">
+        <header>
+          <h2 data-testid="test-user-name">Analaba Sandra</h2>
+        </header>
+
+        <p class="wrap" data-testid="test-user-bio">
+          Passionate frontend developer and UI/UX designer in training. I love building beautiful, accessible web experiences with HTML, CSS, and JavaScript.
+        </p>
+
+        <p class="meta">
+          <strong>Time (ms):</strong>
+          <span id="time" data-testid="test-user-time" aria-live="polite">...</span>
+        </p>
+
+        <nav aria-label="Social links">
+          <ul data-testid="test-user-social-links">
+            <li><a data-testid="test-user-social-twitter"  href="https://twitter.com/"  target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
+            <li><a data-testid="test-user-social-github"   href="https://github.com/"   target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a data-testid="test-user-social-linkedin" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <section aria-labelledby="hobbies-heading">
+      <h3 id="hobbies-heading">Hobbies</h3>
+      <ul class="list" data-testid="test-user-hobbies">
+        <li>Reading</li>
+        <li>Cycling</li>
+        <li>Design</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="dislikes-heading">
+      <h3 id="dislikes-heading">Dislikes</h3>
+      <ul class="list" data-testid="test-user-dislikes">
+        <li>Spam emails</li>
+        <li>Unlabeled buttons</li>
+        <li>Laggy UIs</li>
+      </ul>
+    </section>
+  </article>
+
+  <!-- Link external JS (defer = run after HTML is parsed) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
