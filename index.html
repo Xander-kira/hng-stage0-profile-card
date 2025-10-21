@@ -9,13 +9,22 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+  <strong style="color:var(--color-accent)">Xanderkira</strong>
+  <nav class="nav" aria-label="Primary">
+    <a href="./index.html"   data-testid="nav-profile" aria-current="page">Profile</a>
+    <a href="./about.html"   data-testid="nav-about">About</a>
+    <a href="./contact.html" data-testid="nav-contact">Contact</a>
+  </nav>
+</header>
+
   <article data-testid="test-profile-card" aria-label="Profile card">
     <div class="card-grid">
       <figure>
         <img
           data-testid="test-user-avatar"
           src="Assets/profile.jpg"
-          alt="portrait of Sandra" />640
+          alt="portrait of Xanderkira" />
         <figcaption class="meta">Avatar</figcaption>
         <div class="meta" style="margin-top:.5rem">
   <label for="avatar-url">Avatar URL:</label>

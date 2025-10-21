@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Sandra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Shared header/nav -->
+  <header class="site-header">
+    <strong style="color:var(--color-accent)">Xanderkira</strong>
+    <nav class="nav" aria-label="Primary">
+      <a href="./index.html" data-testid="nav-profile">Profile</a>
+      <a href="./about.html" data-testid="nav-about">About</a>
+      <a href="./contact.html" aria-current="page" data-testid="nav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container card">
+    <h1 style="margin-top:0">Contact Us</h1>
+
+    <!-- Success message (hidden by default) -->
+    <p id="contact-success"
+       class="success"
+       data-testid="test-contact-success"
+       style="display:none"
+       role="status" aria-live="polite">
+      ✅ Thanks! Your message was sent.
+    </p>
+
+    <form id="contact-form" class="form-grid" novalidate>
+      <!-- Full name -->
+      <div>
+        <label for="contact-name">Full name</label>
+        <input id="contact-name" name="name" type="text"
+               required
+               data-testid="test-contact-name"
+               aria-describedby="err-name" />
+        <p id="err-name" class="help-error"
+           data-testid="test-contact-error-name"
+           style="display:none"></p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="email" type="email"
+               required
+               data-testid="test-contact-email"
+               aria-describedby="err-email" />
+        <p id="err-email" class="help-error"
+           data-testid="test-contact-error-email"
+           style="display:none"></p>
+      </div>
+
+      <!-- Subject -->
+      <div>
+        <label for="contact-subject">Subject</label>
+        <input id="contact-subject" name="subject" type="text"
+               required
+               data-testid="test-contact-subject"
+               aria-describedby="err-subject" />
+        <p id="err-subject" class="help-error"
+           data-testid="test-contact-error-subject"
+           style="display:none"></p>
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5"
+                  required minlength="10"
+                  data-testid="test-contact-message"
+                  aria-describedby="err-message"></textarea>
+        <p id="err-message" class="help-error"
+           data-testid="test-contact-error-message"
+           style="display:none"></p>
+      </div>
+
+      <button type="submit" class="btn" data-testid="test-contact-submit">
+        Send message
+      </button>
+    </form>
+  </main>
+
+  <script src="./contact.js" defer></script>
+</body>
+</html>
