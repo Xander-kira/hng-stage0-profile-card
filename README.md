@@ -21,6 +21,14 @@ Plain HTML/CSS/JS profile card with semantic markup, accessibility, and responsi
     ``` 
 
 3. Open index.html in your browser.
+   
+   ```
+5. Profile: https://xander-kira.github.io/hng-stage0-profile-card/
+
+About: https://xander-kira.github.io/hng-stage0-profile-card/about.html
+
+Contact: https://xander-kira.github.io/hng-stage0-profile-card/contact.html
+    ```
 
 ### ✅ Requirements Covered
 All required data-testid attributes:
