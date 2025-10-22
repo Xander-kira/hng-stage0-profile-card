@@ -19,69 +19,67 @@
 
   <main class="container card">
     <h1 style="margin-top:0">Contact Us</h1>
+<form id="contact-form" class="form-grid" novalidate>
 
-    <!-- Success message (hidden by default) -->
-    <p id="contact-success"
-       class="success"
-       data-testid="test-contact-success"
-       style="display:none"
-       role="status" aria-live="polite">
-      ✅ Thanks! Your message was sent.
-    </p>
+  <!-- Full name -->
+  <div>
+    <label for="contact-name">Full name</label>
+    <input id="contact-name" name="name" type="text"
+           required
+           data-testid="test-contact-name"
+           aria-describedby="err-name" />
+    <p class="help-error" id="err-name"
+       data-testid="test-contact-error-name"></p>
+  </div>
 
-    <form id="contact-form" class="form-grid" novalidate>
-      <!-- Full name -->
-      <div>
-        <label for="contact-name">Full name</label>
-        <input id="contact-name" name="name" type="text"
-               required
-               data-testid="test-contact-name"
-               aria-describedby="err-name" />
-        <p id="err-name" class="help-error"
-           data-testid="test-contact-error-name"
-           style="display:none"></p>
-      </div>
+  <!-- Email -->
+  <div>
+    <label for="contact-email">Email</label>
+    <input id="contact-email" name="email" type="email"
+           required
+           data-testid="test-contact-email"
+           aria-describedby="err-email" />
+    <p class="help-error" id="err-email"
+       data-testid="test-contact-error-email"></p>
+  </div>
 
-      <!-- Email -->
-      <div>
-        <label for="contact-email">Email</label>
-        <input id="contact-email" name="email" type="email"
-               required
-               data-testid="test-contact-email"
-               aria-describedby="err-email" />
-        <p id="err-email" class="help-error"
-           data-testid="test-contact-error-email"
-           style="display:none"></p>
-      </div>
+  <!-- Subject -->
+  <div>
+    <label for="contact-subject">Subject</label>
+    <input id="contact-subject" name="subject" type="text"
+           required
+           data-testid="test-contact-subject"
+           aria-describedby="err-subject" />
+    <p class="help-error" id="err-subject"
+       data-testid="test-contact-error-subject"></p>
+  </div>
 
-      <!-- Subject -->
-      <div>
-        <label for="contact-subject">Subject</label>
-        <input id="contact-subject" name="subject" type="text"
-               required
-               data-testid="test-contact-subject"
-               aria-describedby="err-subject" />
-        <p id="err-subject" class="help-error"
-           data-testid="test-contact-error-subject"
-           style="display:none"></p>
-      </div>
+  <!-- Message -->
+  <div>
+    <label for="contact-message">Message</label>
+    <textarea id="contact-message" name="message" rows="5"
+              required minlength="10"
+              data-testid="test-contact-message"
+              aria-describedby="err-message"></textarea>
+    <p class="help-error" id="err-message"
+       data-testid="test-contact-error-message"></p>
+  </div>
 
-      <!-- Message -->
-      <div>
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" rows="5"
-                  required minlength="10"
-                  data-testid="test-contact-message"
-                  aria-describedby="err-message"></textarea>
-        <p id="err-message" class="help-error"
-           data-testid="test-contact-error-message"
-           style="display:none"></p>
-      </div>
+  <!-- Submit -->
+  <button type="submit" class="btn" data-testid="test-contact-submit">
+    Send message
+  </button>
 
-      <button type="submit" class="btn" data-testid="test-contact-submit">
-        Send message
-      </button>
-    </form>
+  <!-- Success message (hidden by default) -->
+  <p id="contact-success"
+     class="success"
+     data-testid="test-contact-success"
+     style="display:none"
+     role="status" aria-live="polite"></p>
+
+</form>
+
+  
   </main>
 
   <script src="./contact.js" defer></script>

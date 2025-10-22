@@ -63,6 +63,7 @@ form.addEventListener('submit', (e) => {
   }
 
   if(valid){
+    success.textContent = "Message sent successfully!";
     success.style.display = 'block';
     form.reset();
     // keep keyboard flow friendly
